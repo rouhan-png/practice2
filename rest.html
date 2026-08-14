@@ -1,0 +1,384 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Rouhan-Kitchen</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700&family=Manrope:wght@400;500;600;700&family=IBM+Plex+Mono:wght@500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="rest.css">
+</head>
+<body>
+
+<!-- ===== NAVBAR ===== -->
+<header class="navbar" id="navbar">
+  <div class="nav-inner">
+    <a href="#home" class="logo">ROUHAN<span class="logo-amp">&amp;</span>KITCHEN</a>
+
+    <nav class="nav-links" id="navLinks">
+      <a href="#home" class="nav-link active-link" data-nav>Home</a>
+      <a href="#menu" class="nav-link" data-nav>Menu</a>
+      <a href="#about" class="nav-link" data-nav>About</a>
+      <a href="#experience" class="nav-link" data-nav>Experience</a>
+      <a href="#gallery" class="nav-link" data-nav>Gallery</a>
+      <a href="#contact" class="nav-link" data-nav>Contact</a>
+    </nav>
+
+    <div class="nav-actions">
+      <a href="#contact" class="btn btn-glow nav-reserve">Reserve Table</a>
+      <button class="hamburger" id="hamburger" aria-label="Toggle menu">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </div>
+</header>
+
+<!-- ===== HERO ===== -->
+<section class="hero" id="home">
+  <canvas id="particles"></canvas>
+  <div class="reactor-core" aria-hidden="true">
+    <div class="reactor-ring ring-1"></div>
+    <div class="reactor-ring ring-2"></div>
+    <div class="reactor-ring ring-3"></div>
+    <div class="reactor-glow"></div>
+  </div>
+
+  <div class="hero-inner">
+    <div class="hero-copy">
+      <p class="eyebrow reveal">EST. 2026 · ROUHAN KITCHEN</p>
+      <h1 class="hero-title">
+        <span class="reveal">TASTE</span>
+        <span class="reveal delay-1">THE</span>
+        <span class="reveal delay-2 accent-text">FUTURE</span>
+      </h1>
+      <p class="hero-desc reveal delay-3">
+        Ingredients synthesized under plasma flame, plated by light. Ember &amp; Void
+        fuses molecular precision with primal fire — a tasting menu engineered
+        for the next century of flavor.
+      </p>
+      <div class="hero-ctas reveal delay-4">
+        <a href="#menu" class="btn btn-primary">Explore Menu</a>
+        <a href="#contact" class="btn btn-outline">Reserve Table</a>
+      </div>
+    </div>
+
+    <div class="hero-visual reveal delay-2">
+      <div class="plate-frame">
+        <img src="biryani.jpg" alt="Signature plated dish under ember light" class="plate-img">
+        <div class="scan-line"></div>
+      </div>
+      <div class="hero-tag">
+        <span class="tag-label">SIGNATURE</span>
+        <span class="tag-name">TOOFANI BIRYANI</span>
+      </div>
+    </div>
+  </div>
+
+  <div class="scroll-indicator">
+    <span></span>
+    <p>SCROLL</p>
+  </div>
+</section>
+
+<!-- ===== MENU ===== -->
+<section class="menu-section" id="menu">
+  <div class="container">
+    <p class="eyebrow reveal">THE MENU</p>
+    <h2 class="section-title reveal">Engineered Flavor</h2>
+    <p class="section-desc reveal">Every course calibrated by our culinary reactor — choose a category to filter the current tasting rotation.</p>
+
+    <div class="filter-tabs reveal">
+      <button class="filter-btn active" data-filter="all">All</button>
+      <button class="filter-btn" data-filter="starters">Starters</button>
+      <button class="filter-btn" data-filter="mains">Mains</button>
+      <button class="filter-btn" data-filter="desserts">Desserts</button>
+      <button class="filter-btn" data-filter="elixirs">Elixirs</button>
+    </div>
+
+    <div class="menu-grid" id="menuGrid">
+
+      <article class="menu-card reveal" data-category="starters">
+        <div class="menu-card-img">
+          <img src="karahi.jpg" alt="Plasma seared scallop starter">
+        </div>
+        <div class="menu-card-body">
+          <div class="menu-card-top">
+            <h3>Karahi</h3>
+            <span class="price">$34</span>
+          </div>
+          <p>delecious and yummy karahi dish for you!</p>
+          <span class="tag">Starter</span>
+        </div>
+      </article>
+
+      <article class="menu-card reveal" data-category="mains">
+        <div class="menu-card-img">
+          <img src="https://images.unsplash.com/photo-1544025162-d76694265947?auto=format&fit=crop&w=600&q=80" alt="Ember crusted wagyu main">
+        </div>
+        <div class="menu-card-body">
+          <div class="menu-card-top">
+            <h3>Ember-Crusted Wagyu</h3>
+            <span class="price">$89</span>
+          </div>
+          <p>72-hour reactor sear, black garlic reduction, glass tuile.</p>
+          <span class="tag">Main</span>
+        </div>
+      </article>
+
+      <article class="menu-card reveal" data-category="desserts">
+        <div class="menu-card-img">
+          <img src="https://images.unsplash.com/photo-1551218808-94e220e084d2?auto=format&fit=crop&w=600&q=80" alt="Void chocolate dessert">
+        </div>
+        <div class="menu-card-body">
+          <div class="menu-card-top">
+            <h3>Void Chocolate Sphere</h3>
+            <span class="price">$22</span>
+          </div>
+          <p>72% dark cocoa shell, liquid nitrogen shatter, gold dust.</p>
+          <span class="tag">Dessert</span>
+        </div>
+      </article>
+
+      <article class="menu-card reveal" data-category="elixirs">
+        <div class="menu-card-img">
+          <img src="https://images.unsplash.com/photo-1533777857889-4be7c70b33f7?auto=format&fit=crop&w=600&q=80" alt="Neon elixir cocktail">
+        </div>
+        <div class="menu-card-body">
+          <div class="menu-card-top">
+            <h3>Photon Bloom Elixir</h3>
+            <span class="price">$19</span>
+          </div>
+          <p>Butterfly pea gin, bioluminescent tonic, dry ice veil.</p>
+          <span class="tag">Elixir</span>
+        </div>
+      </article>
+
+      <article class="menu-card reveal" data-category="starters">
+        <div class="menu-card-img">
+          <img src="https://images.unsplash.com/photo-1567620905732-2d1ec7ab7445?auto=format&fit=crop&w=600&q=80" alt="Reactor bloomed tomato starter">
+        </div>
+        <div class="menu-card-body">
+          <div class="menu-card-top">
+            <h3>Reactor Bloomed Tomato</h3>
+            <span class="price">$28</span>
+          </div>
+          <p>Heirloom compression, basil oil mist, aged balsamic pearls.</p>
+          <span class="tag">Starter</span>
+        </div>
+      </article>
+
+      <article class="menu-card reveal" data-category="mains">
+        <div class="menu-card-img">
+          <img src="https://images.unsplash.com/photo-1467003909585-2f8a72700288?auto=format&fit=crop&w=600&q=80" alt="Deep sea plated main course">
+        </div>
+        <div class="menu-card-body">
+          <div class="menu-card-top">
+            <h3>Deep Current Black Cod</h3>
+            <span class="price">$76</span>
+          </div>
+          <p>Miso-charged glaze, kombu ember smoke, sea grass crisp.</p>
+          <span class="tag">Main</span>
+        </div>
+      </article>
+
+    </div>
+  </div>
+</section>
+
+<!-- ===== ABOUT ===== -->
+<section class="about-section" id="about">
+  <div class="container about-grid">
+    <div class="about-visual reveal">
+      <img src="https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?auto=format&fit=crop&w=800&q=80" alt="Ember and Void dining room interior">
+      <div class="about-frame"></div>
+    </div>
+
+    <div class="about-content reveal delay-1">
+      <p class="eyebrow">OUR STORY</p>
+      <h2 class="section-title">Where Fire Meets Circuit</h2>
+      <p class="section-desc">
+        Founded by a collective of chefs and reactor engineers, Ember &amp; Void
+        was built on a single obsession: flavor should evolve as fast as
+        technology does. Our kitchen fuses live-fire technique with
+        precision plasma calibration — every plate a controlled reaction.
+      </p>
+
+      <div class="stats-grid">
+        <div class="stat-item">
+          <span class="stat-number" data-target="14">0</span>
+          <span class="stat-label">Years Refined</span>
+        </div>
+        <div class="stat-item">
+          <span class="stat-number" data-target="128">0</span>
+          <span class="stat-label">Signature Dishes</span>
+        </div>
+        <div class="stat-item">
+          <span class="stat-number" data-target="9">0</span>
+          <span class="stat-label">Global Awards</span>
+        </div>
+        <div class="stat-item">
+          <span class="stat-number" data-target="42">0</span>
+          <span class="stat-label">Master Chefs</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== EXPERIENCE ===== -->
+<section class="experience-section" id="experience">
+  <div class="container">
+    <p class="eyebrow reveal">THE TASTING SEQUENCE</p>
+    <h2 class="section-title reveal">A Meal in Five Reactions</h2>
+    <p class="section-desc reveal">Our tasting menu is served as a fixed sequence — each course engineered to build on the last.</p>
+
+    <div class="timeline">
+      <div class="timeline-item reveal">
+        <span class="timeline-index">01</span>
+        <div class="timeline-body">
+          <h3>Ignition</h3>
+          <p>An amuse-bouche served under live ember smoke to awaken the palate.</p>
+        </div>
+      </div>
+      <div class="timeline-item reveal delay-1">
+        <span class="timeline-index">02</span>
+        <div class="timeline-body">
+          <h3>Compression</h3>
+          <p>Vegetable-forward course, pressure-infused for concentrated flavor.</p>
+        </div>
+      </div>
+      <div class="timeline-item reveal delay-2">
+        <span class="timeline-index">03</span>
+        <div class="timeline-body">
+          <h3>Reaction</h3>
+          <p>The signature plasma-seared protein course, finished tableside.</p>
+        </div>
+      </div>
+      <div class="timeline-item reveal delay-3">
+        <span class="timeline-index">04</span>
+        <div class="timeline-body">
+          <h3>Suspension</h3>
+          <p>A palate-reset elixir suspended in dry-ice vapor.</p>
+        </div>
+      </div>
+      <div class="timeline-item reveal delay-4">
+        <span class="timeline-index">05</span>
+        <div class="timeline-body">
+          <h3>Afterglow</h3>
+          <p>A dessert finale shattered tableside beneath liquid nitrogen.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== GALLERY ===== -->
+<section class="gallery-section" id="gallery">
+  <div class="container">
+    <p class="eyebrow reveal">GALLERY</p>
+    <h2 class="section-title reveal">Inside Our Restaurant</h2>
+
+    <div class="gallery-grid">
+      <div class="gallery-item reveal">
+        <img src="https://images.unsplash.com/photo-1550966871-3ed3cdb5ed0c?auto=format&fit=crop&w=700&q=80" alt="Dark moody dining room">
+        <div class="gallery-overlay"><span>Dining Hall</span></div>
+      </div>
+      <div class="gallery-item reveal delay-1">
+        <img src="https://images.unsplash.com/photo-1504674900247-0877df9cc836?auto=format&fit=crop&w=700&q=80" alt="Elegant restaurant table setting">
+        <div class="gallery-overlay"><span>The Table</span></div>
+      </div>
+      <div class="gallery-item reveal delay-2">
+        <img src="https://images.unsplash.com/photo-1432139555190-58524dae6a55?auto=format&fit=crop&w=700&q=80" alt="Restaurant bar with glowing lights">
+        <div class="gallery-overlay"><span>The Bar</span></div>
+      </div>
+      <div class="gallery-item reveal delay-3">
+        <img src="https://images.unsplash.com/photo-1414235077428-338989a2e8c0?auto=format&fit=crop&w=700&q=80" alt="Fine dining plated course">
+        <div class="gallery-overlay"><span>Plated Course</span></div>
+      </div>
+      <div class="gallery-item reveal delay-4">
+        <img src="https://images.unsplash.com/photo-1544025162-d76694265947?auto=format&fit=crop&w=700&q=80" alt="Chef finishing a dish">
+        <div class="gallery-overlay"><span>The Reaction</span></div>
+      </div>
+      <div class="gallery-item reveal delay-5">
+        <img src="https://images.unsplash.com/photo-1533777857889-4be7c70b33f7?auto=format&fit=crop&w=700&q=80" alt="Glowing cocktail close up">
+        <div class="gallery-overlay"><span>Photon Bloom</span></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== CONTACT ===== -->
+<section class="contact-section" id="contact">
+  <div class="container contact-grid">
+    <div class="contact-info reveal">
+      <p class="eyebrow">RESERVE</p>
+      <h2 class="section-title">Secure Your Table</h2>
+      <p class="section-desc">Seatings are limited to 40 guests nightly to preserve the precision of every reaction.</p>
+
+      <ul class="info-list">
+        <li><span class="info-label">Address</span>402 Meridian Quarter, Sector 9</li>
+        <li><span class="info-label">Hours</span>Tue – Sun · 18:00 – 00:00</li>
+        <li><span class="info-label">Contact</span>reserve@emberandvoid.com</li>
+        <li><span class="info-label">Phone</span>+1 (555) 204-7781</li>
+      </ul>
+    </div>
+
+    <form class="reservation-form reveal delay-1" id="reservationForm">
+      <div class="form-row">
+        <div class="form-group">
+          <label for="name">Full Name</label>
+          <input type="text" id="name" name="name" placeholder="Your name" required>
+        </div>
+        <div class="form-group">
+          <label for="email">Email</label>
+          <input type="email" id="email" name="email" placeholder="you@email.com" required>
+        </div>
+      </div>
+      <div class="form-row">
+        <div class="form-group">
+          <label for="date">Date</label>
+          <input type="date" id="date" name="date" required>
+        </div>
+        <div class="form-group">
+          <label for="time">Time</label>
+          <input type="time" id="time" name="time" required>
+        </div>
+        <div class="form-group">
+          <label for="guests">Guests</label>
+          <select id="guests" name="guests">
+            <option>1</option><option>2</option><option>3</option>
+            <option>4</option><option>5+</option>
+          </select>
+        </div>
+      </div>
+      <div class="form-group">
+        <label for="notes">Notes (optional)</label>
+        <textarea id="notes" name="notes" rows="3" placeholder="Dietary preferences, occasion..."></textarea>
+      </div>
+      <button type="submit" class="btn btn-primary form-submit">Confirm Reservation</button>
+      <p class="form-success" id="formSuccess">Reservation request received. We'll confirm shortly.</p>
+    </form>
+  </div>
+</section>
+
+<!-- ===== FOOTER ===== -->
+<footer class="footer">
+  <div class="container footer-inner">
+    <a href="#home" class="logo">EMBER<span class="logo-amp">&amp;</span>VOID</a>
+    <nav class="footer-links">
+      <a href="#home">Home</a>
+      <a href="#menu">Menu</a>
+      <a href="#about">About</a>
+      <a href="#experience">Experience</a>
+      <a href="#gallery">Gallery</a>
+      <a href="#contact">Contact</a>
+    </nav>
+    <p class="footer-copy">&copy; <span id="year"></span> Ember &amp; Void. All reactions reserved.</p>
+  </div>
+</footer>
+
+<button class="back-to-top" id="backToTop" aria-label="Back to top">&uarr;</button>
+
+<script src="rest.js"></script>
+</body>
+</html>
